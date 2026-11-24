@@ -92,7 +92,7 @@ class Codebook:
 
 def load_codebook(path: Path) -> Codebook:
     ext = path.suffix.lower()
-    if ext in {".xlsx", ".xls", ".csv", ".tsv"}:
+    if ext in {".xlsx", ".xlsm", ".xls", ".csv", ".tsv"}:
         if ext == ".csv":
             df = pd.read_csv(path)
         elif ext == ".tsv":
