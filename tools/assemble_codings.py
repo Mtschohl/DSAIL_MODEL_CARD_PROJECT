@@ -166,7 +166,9 @@ notes = pd.DataFrame({"item": [
     "exact = verbatim; near = >=90% similar; not_found = could not be located.",
     "PL-B-4.2 requires PL-B-4.1; R-A-19.3 requires R-A-19.2; R-B-22.2 requires R-B-22.1.",
     "TRUE when the quote was not found, the code is not in the codebook, or a dependency rule is violated.",
-    "Table-of-contents entries, page numbers and page markers were treated as navigation and not coded.",
+    "Table-of-contents entries, page numbers and page markers were treated as navigation and not coded. "
+    "GPT-5.5 Tables 10, 14 and 16 were not coded because their columns are interleaved in the text extraction and no "
+    "verbatim quote could be isolated; these should be coded by hand from the PDF.",
     "; ".join(problems) or "none"]})
 
 out.parent.mkdir(parents=True, exist_ok=True)
